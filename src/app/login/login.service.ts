@@ -1,4 +1,4 @@
-import { Http } from '@angular/core'
+import { Http } from '@angular/http'
 
 export class LoginService {
 

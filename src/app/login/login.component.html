@@ -1,4 +1,4 @@
-<form>
+<form  #f="ngForm" >
     <div class="form-group">
         <label for="uername">Username: </label> 
         <input name="username" type="text" class="form-control" ngModel #username="ngModel" required />
@@ -13,5 +13,5 @@
             Password is required.
         </div>
     </div>
-        <button id="submit"  class="btn btn-primary">Submit</button>    
+        <button id="submit"  class="btn btn-primary" [disabled]="!f.valid" (click)="onSubmit(f.form)">Submit</button>    
 </form>
